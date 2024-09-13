@@ -25,6 +25,6 @@ public class TarefaDTO {
     private String descricao;
 
     @NotEmpty
-    private StatusENUM status;
-    
+    private String status;
+
 }
