@@ -2,7 +2,9 @@ package edu.ifba.saj.todo_list.service.impl;
 
 import java.util.List;
 
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import edu.ifba.saj.todo_list.constants.StatusENUM;
 import edu.ifba.saj.todo_list.domain.dto.TarefaDTO;
@@ -22,6 +24,9 @@ public class TarefaServiceImpl implements TarefaService {
     @Override
     public TarefaDTO create(TarefaDTO tarefaDTO) {
         
+        if(tarefaDTO.getId() != null)
+        throw new IllegalArgumentException("O Id não deve ser especificado na criação de uma nova tarefa.");
+
         Tarefa tarefa = repository.save(mapper.toTarefa(tarefaDTO));
         return mapper.toTarefaDTO(tarefa);
     }

@@ -3,6 +3,8 @@ package edu.ifba.saj.todo_list.domain.entity;
 import edu.ifba.saj.todo_list.constants.StatusENUM;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -29,5 +31,6 @@ public class Tarefa {
     private String descricao;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private StatusENUM status;
 }

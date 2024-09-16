@@ -18,7 +18,7 @@ public enum StatusENUM {
 
     public static StatusENUM fromString(String s){
         for(StatusENUM status : StatusENUM.values()){
-            if(status.getStatus().equals(s)){
+            if(status.getStatus().equals(s.toLowerCase())){
                 return status;
             }
         }
