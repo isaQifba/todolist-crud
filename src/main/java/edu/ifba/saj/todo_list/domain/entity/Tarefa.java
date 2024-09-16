@@ -1,5 +1,6 @@
 package edu.ifba.saj.todo_list.domain.entity;
 
+import java.time.LocalDate;
 import edu.ifba.saj.todo_list.constants.StatusENUM;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,4 +34,7 @@ public class Tarefa {
     @Column
     @Enumerated(EnumType.STRING)
     private StatusENUM status;
+
+    @Column(name = "data_criacao")
+    private LocalDate dataCriacao;
 }

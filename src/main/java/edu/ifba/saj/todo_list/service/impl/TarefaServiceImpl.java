@@ -2,9 +2,7 @@ package edu.ifba.saj.todo_list.service.impl;
 
 import java.util.List;
 
-import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import edu.ifba.saj.todo_list.constants.StatusENUM;
 import edu.ifba.saj.todo_list.domain.dto.TarefaDTO;

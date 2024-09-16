@@ -19,7 +19,6 @@ import edu.ifba.saj.todo_list.Exceptions.DefaultControllerAdvice;
 import edu.ifba.saj.todo_list.builder.TarefaDTOBuilder;
 import edu.ifba.saj.todo_list.controller.impl.TarefaController;
 import edu.ifba.saj.todo_list.domain.dto.TarefaDTO;
-import edu.ifba.saj.todo_list.mapper.TarefaMapper;
 import edu.ifba.saj.todo_list.service.TarefaService;
 
 @ContextConfiguration(classes = {TarefaController.class, DefaultControllerAdvice.class})
