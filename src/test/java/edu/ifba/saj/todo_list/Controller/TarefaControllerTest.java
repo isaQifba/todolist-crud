@@ -1,4 +1,4 @@
-package edu.ifba.saj.todo_list.Controller;
+package edu.ifba.saj.todo_list.controller;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.BDDMockito;
@@ -36,7 +36,7 @@ public class TarefaControllerTest {
     private ObjectMapper mapper;
 
     @Test
-    void deveCriarPessoaComSucesso() throws Exception {
+    void deveCriarTarefaComSucesso() throws Exception {
         var request = TarefaDTOBuilder.buildRequest();
         var response = TarefaDTOBuilder.buildResponse();
 
