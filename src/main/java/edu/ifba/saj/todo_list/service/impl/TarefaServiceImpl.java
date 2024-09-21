@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import edu.ifba.saj.todo_list.Exceptions.NotFoundException;
 import edu.ifba.saj.todo_list.constants.StatusENUM;
 import edu.ifba.saj.todo_list.domain.dto.TarefaDTO;
 import edu.ifba.saj.todo_list.domain.entity.Tarefa;
@@ -28,7 +29,6 @@ public class TarefaServiceImpl implements TarefaService {
         Tarefa tarefa = repository.save(mapper.toTarefa(tarefaDTO));
         return mapper.toTarefaDTO(tarefa);
     }
-
     @Override
     public List<TarefaDTO> findAll() {
 
@@ -44,16 +44,23 @@ public class TarefaServiceImpl implements TarefaService {
         // TODO Auto-generated method stub
         return null;
     }
+
     @Override
     public void remove(Long id) {
-        // TODO Auto-generated method stub
-        
+        if (!repository.existsById(id)) {
+            throw new NotFoundException("Tarefa não encontrada com id " + id);
+        }
+        repository.deleteById(id);
     }
+
     @Override
     public TarefaDTO update(TarefaDTO t) {
-        // TODO Auto-generated method stub
-        return null;
+        if (!repository.existsById(t.getId())) {
+            throw new NotFoundException("Tarefa não encontrada com id " + t.getId());
+        }
+    
+        Tarefa tarefaAtualizada = mapper.toTarefa(t);
+        tarefaAtualizada = repository.save(tarefaAtualizada);
+        return mapper.toTarefaDTO(tarefaAtualizada);
     }
-
-
 }
