@@ -7,7 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import edu.ifba.saj.todo_list.constants.StatusENUM;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 

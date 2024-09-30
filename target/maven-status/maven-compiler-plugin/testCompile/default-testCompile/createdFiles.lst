@@ -1,0 +1,5 @@
+edu\ifba\saj\todo_list\builder\TarefaDTOBuilder.class
+edu\ifba\saj\todo_list\TodoListApplicationTests.class
+edu\ifba\saj\todo_list\builder\TarefaBuilder.class
+edu\ifba\saj\todo_list\service\TarefaServiceTest.class
+edu\ifba\saj\todo_list\controller\TarefaControllerTest.class

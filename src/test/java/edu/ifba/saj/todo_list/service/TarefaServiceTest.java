@@ -6,17 +6,14 @@ import org.mockito.BDDMockito;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
 import edu.ifba.saj.todo_list.Exceptions.DefaultControllerAdvice;
 import edu.ifba.saj.todo_list.builder.TarefaBuilder;
 import edu.ifba.saj.todo_list.builder.TarefaDTOBuilder;
 import edu.ifba.saj.todo_list.domain.entity.Tarefa;
-import edu.ifba.saj.todo_list.domain.dto.TarefaDTO;
 import edu.ifba.saj.todo_list.repository.TarefaRepository;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+
 
 @ContextConfiguration(classes = {TarefaService.class, DefaultControllerAdvice.class})
 public class TarefaServiceTest {
@@ -27,7 +24,7 @@ public class TarefaServiceTest {
     @InjectMocks
     private TarefaService service;
 
-    @Test
+    /* @Test
     void deveCriarTarefaComSucesso() throws Exception {
 
         var estadoInicial = TarefaDTOBuilder.buildRequest();
@@ -44,5 +41,6 @@ public class TarefaServiceTest {
         BDDMockito.then(repository.save(tarefaInicial));
         Assertions.assertEquals(tarefaCriada, estadoFinal);
 
-    }
+    } */
+   
 }

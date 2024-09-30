@@ -1,0 +1,16 @@
+edu\ifba\saj\todo_list\controller\impl\TarefaController.class
+edu\ifba\saj\todo_list\mapper\TarefaMapperImpl.class
+edu\ifba\saj\todo_list\domain\dto\TarefaDTO$TarefaDTOBuilder.class
+edu\ifba\saj\todo_list\domain\dto\TarefaDTO.class
+edu\ifba\saj\todo_list\service\impl\TarefaServiceImpl.class
+edu\ifba\saj\todo_list\repository\TarefaRepository.class
+edu\ifba\saj\todo_list\service\TarefaService.class
+edu\ifba\saj\todo_list\domain\entity\Tarefa$TarefaBuilder.class
+edu\ifba\saj\todo_list\Exceptions\NotFoundException.class
+edu\ifba\saj\todo_list\Exceptions\DefaultControllerAdvice.class
+edu\ifba\saj\todo_list\TodoListApplication.class
+edu\ifba\saj\todo_list\constants\StatusENUM.class
+edu\ifba\saj\todo_list\Exceptions\ErrorResponse.class
+edu\ifba\saj\todo_list\mapper\TarefaMapper.class
+edu\ifba\saj\todo_list\domain\entity\Tarefa.class
+edu\ifba\saj\todo_list\controller\TarefaControllerAPI.class
