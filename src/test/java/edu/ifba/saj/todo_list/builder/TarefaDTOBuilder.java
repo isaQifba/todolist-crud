@@ -14,7 +14,7 @@ public class TarefaDTOBuilder {
         .id(1L)
         .titulo("Enviar e-mail")
         .descricao("Enviar e-mail para a coordenacao")
-        .status("PARA_FAZER")
+        .status("para_fazer")
         .dataCriacao(dataCriacao)
         .build();
     }

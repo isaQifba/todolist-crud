@@ -178,19 +178,19 @@ public class TarefaControllerTest {
         p1.setId(1L);
         var p2 = TarefaDTOBuilder.buildResponse();
         p2.setId(2L);
-        p2.setStatus("PARA_FAZER");
+        p2.setStatus("para_fazer");
 
         var responseEsperada = List.of(p1, p2);
 
-        given(service.findByStatus(StatusENUM.fromString("PARA_FAZER")))
+        given(service.findByStatus(StatusENUM.fromString("para_fazer")))
             .willReturn(responseEsperada);
 
         mockMvc.perform(
-            get(API_TAREFA + "/status/{status}", "PARA_FAZER")
+            get(API_TAREFA + "/status/{status}", "para_fazer")
             .accept(MediaType.APPLICATION_JSON)
             .contentType(MediaType.APPLICATION_JSON))
         .andExpect(MockMvcResultMatchers.status().isOk())
         .andExpect(jsonPath("$[0].id").value("1"))
-        .andExpect(jsonPath("$[1].status").value("PARA_FAZER"));
+        .andExpect(jsonPath("$[1].status").value("para_fazer"));
     }
 }

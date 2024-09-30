@@ -6,21 +6,15 @@ import edu.ifba.saj.todo_list.domain.entity.Tarefa;
 
 public class TarefaBuilder {
     
-    public static Tarefa buildTarefaInicial(){
+    public static Tarefa buildTarefa(){
+        var dataCriacao = LocalDate.of(2024, 9, 29);
         return Tarefa
         .builder()
-        .id(null)
+        .id(1L)
         .titulo("Enviar e-mail")
         .descricao("Enviar e-mail para a coordenacao")
         .status(StatusENUM.PARA_FAZER)
-        .dataCriacao(LocalDate.now())
+        .dataCriacao(dataCriacao)
         .build();
-    }
-
-
-    public static Tarefa buildTarefaEsperada(){
-        var tarefa = buildTarefaInicial();
-        tarefa.setId(1L);
-        return tarefa;
     }
 }
