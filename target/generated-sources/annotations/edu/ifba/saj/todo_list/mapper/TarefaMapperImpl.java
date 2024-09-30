@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-09-29T23:02:58-0300",
-    comments = "version: 1.6.0, compiler: Eclipse JDT (IDE) 3.40.0.v20240919-1711, environment: Java 17.0.12 (Eclipse Adoptium)"
+    date = "2024-09-29T23:55:15-0300",
+    comments = "version: 1.6.0, compiler: javac, environment: Java 21.0.1 (Oracle Corporation)"
 )
 @Component
 public class TarefaMapperImpl extends TarefaMapper {
@@ -21,13 +21,13 @@ public class TarefaMapperImpl extends TarefaMapper {
 
         TarefaDTO.TarefaDTOBuilder tarefaDTO = TarefaDTO.builder();
 
-        tarefaDTO.dataCriacao( tarefa.getDataCriacao() );
-        tarefaDTO.descricao( tarefa.getDescricao() );
         tarefaDTO.id( tarefa.getId() );
+        tarefaDTO.titulo( tarefa.getTitulo() );
+        tarefaDTO.descricao( tarefa.getDescricao() );
         if ( tarefa.getStatus() != null ) {
             tarefaDTO.status( tarefa.getStatus().name() );
         }
-        tarefaDTO.titulo( tarefa.getTitulo() );
+        tarefaDTO.dataCriacao( tarefa.getDataCriacao() );
 
         return tarefaDTO.build();
     }
@@ -40,9 +40,9 @@ public class TarefaMapperImpl extends TarefaMapper {
 
         Tarefa.TarefaBuilder tarefa = Tarefa.builder();
 
-        tarefa.descricao( tarefaDTO.getDescricao() );
         tarefa.id( tarefaDTO.getId() );
         tarefa.titulo( tarefaDTO.getTitulo() );
+        tarefa.descricao( tarefaDTO.getDescricao() );
 
         tarefa.status( toStatusENUM(tarefaDTO.getStatus()) );
         tarefa.dataCriacao( generateDataCriacao() );

@@ -1,4 +1,4 @@
-package edu.ifba.saj.todo_list.Exceptions;
+package edu.ifba.saj.todo_list.exceptions;
 
 public class NotFoundException extends RuntimeException {
     

@@ -8,10 +8,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.test.context.ContextConfiguration;
 
-import edu.ifba.saj.todo_list.Exceptions.DefaultControllerAdvice;
 import edu.ifba.saj.todo_list.builder.TarefaBuilder;
 import edu.ifba.saj.todo_list.builder.TarefaDTOBuilder;
 import edu.ifba.saj.todo_list.domain.entity.Tarefa;
+import edu.ifba.saj.todo_list.exceptions.DefaultControllerAdvice;
 import edu.ifba.saj.todo_list.repository.TarefaRepository;
 
 

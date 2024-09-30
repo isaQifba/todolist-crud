@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import edu.ifba.saj.todo_list.Exceptions.NotFoundException;
 import edu.ifba.saj.todo_list.constants.StatusENUM;
 import edu.ifba.saj.todo_list.domain.dto.TarefaDTO;
 import edu.ifba.saj.todo_list.domain.entity.Tarefa;
+import edu.ifba.saj.todo_list.exceptions.NotFoundException;
 import edu.ifba.saj.todo_list.mapper.TarefaMapper;
 import edu.ifba.saj.todo_list.repository.TarefaRepository;
 import edu.ifba.saj.todo_list.service.TarefaService;

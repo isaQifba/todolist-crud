@@ -8,21 +8,22 @@ public class TarefaDTOBuilder {
 
 
     public static TarefaDTO buildRequest(){
+        var dataCriacao = LocalDate.of(2024, 9, 29);
         return TarefaDTO
         .builder()
-        .id(null)
+        .id(1L)
         .titulo("Enviar e-mail")
         .descricao("Enviar e-mail para a coordenacao")
         .status("PARA_FAZER")
-        .dataCriacao(null)
+        .dataCriacao(dataCriacao)
         .build();
     }
 
 
     public static TarefaDTO buildResponse(){
         var tarefa = buildRequest();
-        tarefa.setId(1L);
-        tarefa.setDataCriacao(LocalDate.now());
+        tarefa.setId(null);
+        tarefa.setDataCriacao(null);
         return tarefa;
     }
     
